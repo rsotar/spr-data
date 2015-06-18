@@ -13,8 +13,8 @@ public class Initializer implements WebApplicationInitializer {
 
 	private static final String DISPATCHER_SERVLET_NAME = "dispatcher";
 
-	public void onStartup(ServletContext servletContext)
-			throws ServletException {
+	public void onStartup(ServletContext servletContext) throws ServletException {
+
 		AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
 		ctx.register(WebAppConfig.class);
 		servletContext.addListener(new ContextLoaderListener(ctx));
